@@ -36,8 +36,10 @@ public class Products {
 		WebElement buttonAddToCartBackPack = driver.findElement(By.id(buttonAddToCartBackPackID));
 		WebElement divPriceBackPack = buttonAddToCartBackPack.findElement(By.xpath(divPriceBackPackXPATH));
 		float priceBackpack = Float.parseFloat(divPriceBackPack.getText().substring(1).trim());
-		mapItemPrices.put("Backpack", priceBackpack);
+		mapItemPrices.put(buttonAddToCartBackPackID, priceBackpack);
 		buttonAddToCartBackPack.click();
+		
+		System.out.println("Products, Adding into the cart this product: "+buttonAddToCartBackPackID+", with this price"+priceBackpack);
 		
 		
 		WebElement buttonAddToCartBikeLight= driver.findElement(By.id(buttonAddToCartBikeLightID));

@@ -10,7 +10,7 @@ import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.chrome.ChromeDriver;
-
+import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -18,6 +18,7 @@ import org.testng.annotations.Test;
 import pages.Products;
 import pages.Cart;
 import pages.CheckOutStepOne;
+import pages.CheckOutStepTwo;
 import pages.Login;
 
 
@@ -50,7 +51,9 @@ public class SeleniumSaurceDemoHappyPathTestNG {
 	  CheckOutStepOne stepOne = new CheckOutStepOne(driver);
 	  stepOne.fillDataAndContinue();
 	  
-	  
+	  CheckOutStepTwo stepTwo = new CheckOutStepTwo(driver);
+	 
+	  Assert.assertTrue(stepTwo.checkTotalPrices(),"The sum of prices should be equal as the subtotal"); 
   }
 
 

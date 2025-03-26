@@ -36,6 +36,7 @@ public class Login {
 		WebElement inputButton = driver.findElement(By.id(inputButtonID));
 		inputButton.click();
 		
+		System.out.println("Login: Login with UserName "+dataUsername+" and Password = "+dataPassword);
 		
 	}
 	
