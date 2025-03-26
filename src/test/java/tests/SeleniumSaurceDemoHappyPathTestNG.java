@@ -15,6 +15,8 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+import pages.Products;
+import pages.Cart;
 import pages.Login;
 
 
@@ -33,10 +35,17 @@ public class SeleniumSaurceDemoHappyPathTestNG {
   }
   
   @Test
-  public void start() {
+  public void testThatTotalPriceIsCorrect() {
 	  
 	  Login login = new Login(driver);
 	  login.loginWithStandartUser();
+	  
+	  Products products = new Products(driver);
+	  products.savePricesAndAddToCart();
+	  
+	  Cart myCart = new Cart(driver);
+	  myCart.checkOut();
+	  
 	  
   }
 
