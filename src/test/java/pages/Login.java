@@ -12,8 +12,8 @@ public class Login {
 	String inputPasswordID = "password";
 	String inputButtonID = "login-button";
 	
-	String username = "standard_user";
-	String password = "secret_sauce";
+	String dataUsername = "standard_user";
+	String dataPassword = "secret_sauce";
 	
 	
 	WebDriver driver;
@@ -28,10 +28,10 @@ public class Login {
 		
 		
 		WebElement inputUserName = driver.findElement(By.id(inputUserNameID));
-		inputUserName.sendKeys(username);
+		inputUserName.sendKeys(dataUsername);
 		
 		WebElement inputPassword = driver.findElement(By.id(inputPasswordID));
-		inputPassword.sendKeys(password);
+		inputPassword.sendKeys(dataPassword);
 		
 		WebElement inputButton = driver.findElement(By.id(inputButtonID));
 		inputButton.click();

@@ -13,12 +13,13 @@ public class Products {
 	String buttonAddToCartBikeLightID = "add-to-cart-sauce-labs-bike-light";
 	String buttonAddToCartFleeceJacketID = "add-to-cart-sauce-labs-fleece-jacket";					
 	String buttonAddToCartOnesieID = "add-to-cart-sauce-labs-onesie";		
-	String divCartID = "shopping_cart_container";
 	
 	String divPriceBackPackXPATH = "//button[@id='"+buttonAddToCartBackPackID+"']/preceding-sibling::*";
 	String divPriceBikeLightXPATH = "//button[@id='"+buttonAddToCartBikeLightID+"']/preceding-sibling::*";
 	String divPriceFleeceJacketXPATH = "//button[@id='"+buttonAddToCartFleeceJacketID+"']/preceding-sibling::*";
 	String divPriceOnesieXPATH = "//button[@id='"+buttonAddToCartOnesieID+"']/preceding-sibling::*";
+	
+	String divCartID = "shopping_cart_container";
 	
 	WebDriver driver;
 	

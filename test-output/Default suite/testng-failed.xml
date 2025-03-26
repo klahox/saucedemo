@@ -7,7 +7,7 @@
         <methods>
           <include name="beforeMethod"/>
           <include name="afterMethod"/>
-          <include name="start"/>
+          <include name="testThatTotalPriceIsCorrect"/>
         </methods>
       </class> <!-- tests.SeleniumSaurceDemoHappyPathTestNG -->
     </classes>

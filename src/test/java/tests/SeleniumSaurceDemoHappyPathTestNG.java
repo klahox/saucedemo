@@ -17,6 +17,7 @@ import org.testng.annotations.Test;
 
 import pages.Products;
 import pages.Cart;
+import pages.CheckOutStepOne;
 import pages.Login;
 
 
@@ -45,6 +46,9 @@ public class SeleniumSaurceDemoHappyPathTestNG {
 	  
 	  Cart myCart = new Cart(driver);
 	  myCart.checkOut();
+	  
+	  CheckOutStepOne stepOne = new CheckOutStepOne(driver);
+	  stepOne.fillDataAndContinue();
 	  
 	  
   }

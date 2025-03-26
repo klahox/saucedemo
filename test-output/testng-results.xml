@@ -2,20 +2,20 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-03-26T12:45:57 CET" name="Default suite" finished-at="2025-03-26T12:46:03 CET" duration-ms="6453">
+  <suite started-at="2025-03-26T13:12:19 CET" name="Default suite" finished-at="2025-03-26T13:12:26 CET" duration-ms="7237">
     <groups>
     </groups>
-    <test started-at="2025-03-26T12:45:57 CET" name="Default test" finished-at="2025-03-26T12:46:03 CET" duration-ms="6453">
+    <test started-at="2025-03-26T13:12:19 CET" name="Default test" finished-at="2025-03-26T13:12:26 CET" duration-ms="7237">
       <class name="tests.SeleniumSaurceDemoHappyPathTestNG">
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:tests.SeleniumSaurceDemoHappyPathTestNG@4567f35d]" started-at="2025-03-26T12:45:57 CET" name="beforeMethod" finished-at="2025-03-26T12:46:01 CET" duration-ms="4136" status="PASS">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:tests.SeleniumSaurceDemoHappyPathTestNG@4567f35d]" started-at="2025-03-26T13:12:19 CET" name="beforeMethod" finished-at="2025-03-26T13:12:23 CET" duration-ms="4301" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="start()[pri:0, instance:tests.SeleniumSaurceDemoHappyPathTestNG@4567f35d]" started-at="2025-03-26T12:46:01 CET" name="start" finished-at="2025-03-26T12:46:03 CET" duration-ms="1355" status="PASS">
+        <test-method signature="testThatTotalPriceIsCorrect()[pri:0, instance:tests.SeleniumSaurceDemoHappyPathTestNG@4567f35d]" started-at="2025-03-26T13:12:23 CET" name="testThatTotalPriceIsCorrect" finished-at="2025-03-26T13:12:25 CET" duration-ms="1971" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- start -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:tests.SeleniumSaurceDemoHappyPathTestNG@4567f35d]" started-at="2025-03-26T12:46:03 CET" name="afterMethod" finished-at="2025-03-26T12:46:03 CET" duration-ms="891" status="PASS">
+        </test-method> <!-- testThatTotalPriceIsCorrect -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:tests.SeleniumSaurceDemoHappyPathTestNG@4567f35d]" started-at="2025-03-26T13:12:25 CET" name="afterMethod" finished-at="2025-03-26T13:12:26 CET" duration-ms="867" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
