@@ -1,0 +1,15 @@
+[INFO ] 2025-03-27 12:37:40,970 SeleniumSaurceDemoHappyPathTestNG.testThatTotalPriceIsCorrect() - Starting tests...
+[INFO ] 2025-03-27 12:37:41,626 Login.loginWithStandartUser() - Login with UserName=standard_user and Password=secret_sauce 
+[INFO ] 2025-03-27 12:37:41,851 Products.savePricesAndAddToCart() - Adding into the cart this product add-to-cart-sauce-labs-backpack with this price 29.99
+[INFO ] 2025-03-27 12:37:42,003 Products.savePricesAndAddToCart() - Adding into the cart this product add-to-cart-sauce-labs-bike-light with this price 9.99
+[INFO ] 2025-03-27 12:37:42,131 Products.savePricesAndAddToCart() - Adding into the cart this product add-to-cart-sauce-labs-fleece-jacket with this price 49.99
+[INFO ] 2025-03-27 12:37:42,256 Products.savePricesAndAddToCart() - Adding into the cart this product add-to-cart-sauce-labs-backpack with this price 7.99
+[INFO ] 2025-03-27 12:37:42,257 Products.savePricesAndAddToCart() - Showing cart data {add-to-cart-sauce-labs-bike-light=9.99, add-to-cart-sauce-labs-backpack=29.99, add-to-cart-sauce-labs-onesie=7.99, add-to-cart-sauce-labs-fleece-jacket=49.99}
+[INFO ] 2025-03-27 12:37:42,494 Cart.checkOut() - Clicking on button checkout
+[INFO ] 2025-03-27 12:37:42,621 CheckOutStepOne.fillDataAndContinue() - Filling the input first-name with data Klajdi
+[INFO ] 2025-03-27 12:37:42,745 CheckOutStepOne.fillDataAndContinue() - Filling the input last-name with data Hoxha Sina
+[INFO ] 2025-03-27 12:37:42,844 CheckOutStepOne.fillDataAndContinue() - Filling the input postal-code with data 41920
+[INFO ] 2025-03-27 12:37:42,976 CheckOutStepOne.fillDataAndContinue() - Clicking on button continue continue
+[INFO ] 2025-03-27 12:37:43,070 CheckOutStepTwo.checkTotalPrices() - Summing the prices of all products 97.96
+[INFO ] 2025-03-27 12:37:43,100 CheckOutStepTwo.checkTotalPrices() - Getting the Subtotal price from the web  97.96
+[INFO ] 2025-03-27 12:37:43,341 SeleniumSaurceDemoHappyPathTestNG.afterMethod() - Ruta de la caputa => C:\Users\klajd\Documents\repositories\saucedemo\captura20250327123743.png

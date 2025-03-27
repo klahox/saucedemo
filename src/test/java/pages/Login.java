@@ -1,12 +1,15 @@
 package pages;
 
 import org.openqa.selenium.By;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 public class Login {
-	
-//	String buttonAcceptCookiesID = "L2AGLb";	
+		
+	private static final Logger logger = LogManager.getLogger(Login.class);
 	
 	String inputUserNameID = "user-name";
 	String inputPasswordID = "password";
@@ -36,8 +39,7 @@ public class Login {
 		WebElement inputButton = driver.findElement(By.id(inputButtonID));
 		inputButton.click();
 		
-		System.out.println("Login: Login with UserName "+dataUsername+" and Password = "+dataPassword);
-		
+		logger.info("Login with UserName={} and Password={} ",dataUsername,dataPassword);
 	}
 	
 
