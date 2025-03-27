@@ -21,6 +21,7 @@ import pages.Products;
 import pages.Cart;
 import pages.CheckOutStepOne;
 import pages.CheckOutStepTwo;
+import pages.CheckoutComplete;
 import pages.Login;
 
 
@@ -61,8 +62,13 @@ public class SeleniumSaurceDemoHappyPathTestNG {
 	  stepOne.fillDataAndContinue();
 	  
 	  CheckOutStepTwo stepTwo = new CheckOutStepTwo(driver);
-	  Assert.assertTrue(stepTwo.checkTotalPrices(),"The sum of prices should be equal as the subtotal"); 
+	  Assert.assertTrue(stepTwo.checkSumOfItemsIsEqualAsSubtotalPrice(),"The sum of prices should be equal as the subtotal"); 
+	  Assert.assertTrue(stepTwo.checkTaxIsCorrect(),"The tax should be correct"); 
+	  Assert.assertTrue(stepTwo.checkTotalPriceIsSubtotalPlusTax(),"The Total price should be correct"); 
+	  stepTwo.clickOnFinish();
 	  
+	  CheckoutComplete finish = new CheckoutComplete(driver);
+	  Assert.assertTrue(finish.checkThatOrderIsFinished(),"In the finish page should be shown the OK image, the header, text and back button");
   }
 
 
