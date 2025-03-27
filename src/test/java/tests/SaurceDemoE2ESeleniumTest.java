@@ -9,6 +9,7 @@ import org.openqa.selenium.WebDriver;
 import org.apache.commons.io.FileUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.json.JSONObject;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -17,7 +18,7 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import pages.Products;
+import pages.Inventory;
 import pages.Cart;
 import pages.CheckOutStepOne;
 import pages.CheckOutStepTwo;
@@ -26,9 +27,9 @@ import pages.Login;
 
 
 
-public class SaurceDemoE2ESeleniumTestNG {
+public class SaurceDemoE2ESeleniumTest {
 	
-	private static final Logger logger = LogManager.getLogger(SaurceDemoE2ESeleniumTestNG.class);
+	private static final Logger logger = LogManager.getLogger(SaurceDemoE2ESeleniumTest.class);
 	
 	WebDriver driver;
 	
@@ -44,7 +45,7 @@ public class SaurceDemoE2ESeleniumTestNG {
   }
   
   @Test
-  public void testThatTotalPriceIsCorrect() {
+  public void checkThatTotalPriceIsCorrect() {
 	  
 	  logger.info("Starting tests...");
 
@@ -53,11 +54,12 @@ public class SaurceDemoE2ESeleniumTestNG {
 	  login.loginWithStandartUser();
 	  
 	  //Adding productos into the cart
-	  Products products = new Products(driver);
-	  products.savePricesAndAddToCart();
+	  Inventory products = new Inventory(driver);
+	  JSONObject jsonNamePrice =products.savePricesAndAddToCart();
 	  
 	  //Starting checkout
 	  Cart myCart = new Cart(driver);
+	  Assert.assertTrue(myCart.checkThatNameAndPricesAreCorrect(jsonNamePrice),"The name and prices should be the same as in the product page");
 	  myCart.checkOut();
 	  
 	  //Adding User Data for checkout
@@ -68,6 +70,7 @@ public class SaurceDemoE2ESeleniumTestNG {
 	  CheckOutStepTwo stepTwo = new CheckOutStepTwo(driver);
 	  Assert.assertTrue(stepTwo.checkSumOfItemsIsEqualAsSubtotalPrice(),"The sum of prices should be equal as the subtotal"); 
 	  Assert.assertTrue(stepTwo.checkTotalPriceIsSubtotalPlusTax(),"The Total price should be correct"); 
+	  Assert.assertTrue(stepTwo.checkThatNameAndPricesAreCorrect(jsonNamePrice),"The name and prices should be the same as in the product page");
 	  stepTwo.clickOnFinish();
 	  
 	  //Finishing the order and checking the finish page

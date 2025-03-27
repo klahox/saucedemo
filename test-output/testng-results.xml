@@ -2,24 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-03-27T15:37:29 CET" name="Default suite" finished-at="2025-03-27T15:37:35 CET" duration-ms="6314">
+  <suite started-at="2025-03-27T17:24:10 CET" name="Default suite" finished-at="2025-03-27T17:24:18 CET" duration-ms="7685">
     <groups>
     </groups>
-    <test started-at="2025-03-27T15:37:29 CET" name="Default test" finished-at="2025-03-27T15:37:35 CET" duration-ms="6314">
-      <class name="tests.SaurceDemoE2ESeleniumTestNG">
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:tests.SaurceDemoE2ESeleniumTestNG@3697186]" started-at="2025-03-27T15:37:29 CET" name="beforeMethod" finished-at="2025-03-27T15:37:32 CET" duration-ms="3125" status="PASS">
+    <test started-at="2025-03-27T17:24:10 CET" name="Default test" finished-at="2025-03-27T17:24:18 CET" duration-ms="7685">
+      <class name="tests.SaurceDemoE2ESeleniumTest">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:tests.SaurceDemoE2ESeleniumTest@46b61c56]" started-at="2025-03-27T17:24:10 CET" name="beforeMethod" finished-at="2025-03-27T17:24:14 CET" duration-ms="3545" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="testThatTotalPriceIsCorrect()[pri:0, instance:tests.SaurceDemoE2ESeleniumTestNG@3697186]" started-at="2025-03-27T15:37:32 CET" name="testThatTotalPriceIsCorrect" finished-at="2025-03-27T15:37:34 CET" duration-ms="2328" status="PASS">
+        <test-method signature="checkThatTotalPriceIsCorrect()[pri:0, instance:tests.SaurceDemoE2ESeleniumTest@46b61c56]" started-at="2025-03-27T17:24:14 CET" name="checkThatTotalPriceIsCorrect" finished-at="2025-03-27T17:24:17 CET" duration-ms="2803" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testThatTotalPriceIsCorrect -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:tests.SaurceDemoE2ESeleniumTestNG@3697186]" started-at="2025-03-27T15:37:34 CET" name="afterMethod" finished-at="2025-03-27T15:37:35 CET" duration-ms="798" status="PASS">
+        </test-method> <!-- checkThatTotalPriceIsCorrect -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:tests.SaurceDemoE2ESeleniumTest@46b61c56]" started-at="2025-03-27T17:24:17 CET" name="afterMethod" finished-at="2025-03-27T17:24:18 CET" duration-ms="1275" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-      </class> <!-- tests.SaurceDemoE2ESeleniumTestNG -->
+      </class> <!-- tests.SaurceDemoE2ESeleniumTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
