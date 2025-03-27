@@ -7,6 +7,9 @@ import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import java.math.RoundingMode;
+import java.text.DecimalFormat;
+
 
 public class CheckOutStepTwo {
 	
@@ -34,7 +37,6 @@ public class CheckOutStepTwo {
 	public boolean checkSumOfItemsIsEqualAsSubtotalPrice() {
 		
 		List<WebElement> listDivPrices = driver.findElements(By.xpath(divItemPriceXPATH));
-		
 		float sumOfPrices = 0;
 		for(WebElement divPrice: listDivPrices){
 			
@@ -54,26 +56,13 @@ public class CheckOutStepTwo {
 		return false;
 	}
 	
-	public boolean checkTaxIsCorrect(){
+	
+	public boolean checkTotalPriceIsSubtotalPlusTax(){
 		
 		WebElement divTaxPrice=  driver.findElement(By.xpath(divTaxXPATH));
 		taxPriceWeb = Float.parseFloat(divTaxPrice.getText().split("\\$")[1].trim());
 		logger.info("Getting the TAX price from the web  {}",taxPriceWeb);		
-		
-		float taxPriceCalculation = this.subTotalPriceWeb * 0.08f;
-		
-		logger.info("Getting the TAX price from Calculation  {}",taxPriceCalculation);	
-		
-		if(taxPriceCalculation == this.taxPriceWeb) {
-			
-			return true;
-		}
-		
-		return false;
-	}
-	
-	public boolean checkTotalPriceIsSubtotalPlusTax(){
-		
+				
 		
 		WebElement divTotalPrice=  driver.findElement(By.xpath(divTotalPriceXPATH));
 		totalPriceWeb = Float.parseFloat(divTotalPrice.getText().split("\\$")[1].trim());

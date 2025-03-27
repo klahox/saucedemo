@@ -26,9 +26,6 @@ public class CheckoutComplete {
 	
 	public boolean checkThatOrderIsFinished() {
 		
-		
-		boolean isDisplayed = true;
-		
 		if(!driver.findElement(By.xpath(imgPonyExpressXPATH)).isDisplayed()) {
 			
 			logger.error("The IMAGE is not displayed Xapth={}",imgPonyExpressXPATH);
@@ -54,7 +51,7 @@ public class CheckoutComplete {
 		}		
 			
 	
-		return isDisplayed;
+		return true;
 	}
 	
 

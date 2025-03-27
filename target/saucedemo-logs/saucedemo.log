@@ -1,17 +1,18 @@
-[INFO ] 2025-03-27 13:47:56,484 SeleniumSaurceDemoHappyPathTestNG.testThatTotalPriceIsCorrect() - Starting tests...
-[INFO ] 2025-03-27 13:47:57,027 Login.loginWithStandartUser() - Login with UserName=standard_user and Password=secret_sauce 
-[INFO ] 2025-03-27 13:47:57,235 Products.savePricesAndAddToCart() - Adding into the cart this product add-to-cart-sauce-labs-backpack with this price 29.99
-[INFO ] 2025-03-27 13:47:57,396 Products.savePricesAndAddToCart() - Adding into the cart this product add-to-cart-sauce-labs-bike-light with this price 9.99
-[INFO ] 2025-03-27 13:47:57,536 Products.savePricesAndAddToCart() - Adding into the cart this product add-to-cart-sauce-labs-fleece-jacket with this price 49.99
-[INFO ] 2025-03-27 13:47:57,685 Products.savePricesAndAddToCart() - Adding into the cart this product add-to-cart-sauce-labs-backpack with this price 7.99
-[INFO ] 2025-03-27 13:47:57,686 Products.savePricesAndAddToCart() - Showing cart data {add-to-cart-sauce-labs-bike-light=9.99, add-to-cart-sauce-labs-backpack=29.99, add-to-cart-sauce-labs-onesie=7.99, add-to-cart-sauce-labs-fleece-jacket=49.99}
-[INFO ] 2025-03-27 13:47:57,931 Cart.checkOut() - Clicking on button checkout
-[INFO ] 2025-03-27 13:47:58,044 CheckOutStepOne.fillDataAndContinue() - Filling the input first-name with data Klajdi
-[INFO ] 2025-03-27 13:47:58,168 CheckOutStepOne.fillDataAndContinue() - Filling the input last-name with data Hoxha Sina
-[INFO ] 2025-03-27 13:47:58,267 CheckOutStepOne.fillDataAndContinue() - Filling the input postal-code with data 41920
-[INFO ] 2025-03-27 13:47:58,392 CheckOutStepOne.fillDataAndContinue() - Clicking on button continue continue
-[INFO ] 2025-03-27 13:47:58,482 CheckOutStepTwo.checkSumOfItemsIsEqualAsSubtotalPrice() - Summing the prices of all products 97.96
-[INFO ] 2025-03-27 13:47:58,511 CheckOutStepTwo.checkSumOfItemsIsEqualAsSubtotalPrice() - Getting the SUBTOTAL price from the web  97.96
-[INFO ] 2025-03-27 13:47:58,544 CheckOutStepTwo.checkTaxIsCorrect() - Getting the TAX price from the web  7.84
-[INFO ] 2025-03-27 13:47:58,545 CheckOutStepTwo.checkTaxIsCorrect() - Getting the TAX price from Calculation  7.8367996
-[INFO ] 2025-03-27 13:47:58,776 SeleniumSaurceDemoHappyPathTestNG.afterMethod() - Ruta de la caputa => C:\Users\klajd\Documents\repositories\saucedemo\captura20250327134758.png
+[INFO ] 2025-03-27 15:37:32,324 SaurceDemoE2ESeleniumTestNG.testThatTotalPriceIsCorrect() - Starting tests...
+[INFO ] 2025-03-27 15:37:32,929 Login.loginWithStandartUser() - Login with UserName=standard_user and Password=secret_sauce 
+[INFO ] 2025-03-27 15:37:33,120 Products.savePricesAndAddToCart() - Adding into the cart this product add-to-cart-sauce-labs-backpack with this price 29.99
+[INFO ] 2025-03-27 15:37:33,253 Products.savePricesAndAddToCart() - Adding into the cart this product add-to-cart-sauce-labs-bike-light with this price 9.99
+[INFO ] 2025-03-27 15:37:33,368 Products.savePricesAndAddToCart() - Adding into the cart this product add-to-cart-sauce-labs-fleece-jacket with this price 49.99
+[INFO ] 2025-03-27 15:37:33,487 Products.savePricesAndAddToCart() - Adding into the cart this product add-to-cart-sauce-labs-backpack with this price 7.99
+[INFO ] 2025-03-27 15:37:33,488 Products.savePricesAndAddToCart() - Showing cart data {add-to-cart-sauce-labs-bike-light=9.99, add-to-cart-sauce-labs-backpack=29.99, add-to-cart-sauce-labs-onesie=7.99, add-to-cart-sauce-labs-fleece-jacket=49.99}
+[INFO ] 2025-03-27 15:37:33,728 Cart.checkOut() - Clicking on button checkout
+[INFO ] 2025-03-27 15:37:33,842 CheckOutStepOne.fillDataAndContinue() - Filling the input first-name with data Klajdi
+[INFO ] 2025-03-27 15:37:33,964 CheckOutStepOne.fillDataAndContinue() - Filling the input last-name with data Hoxha Sina
+[INFO ] 2025-03-27 15:37:34,064 CheckOutStepOne.fillDataAndContinue() - Filling the input postal-code with data 41920
+[INFO ] 2025-03-27 15:37:34,190 CheckOutStepOne.fillDataAndContinue() - Clicking on button continue continue
+[INFO ] 2025-03-27 15:37:34,280 CheckOutStepTwo.checkSumOfItemsIsEqualAsSubtotalPrice() - Summing the prices of all products 97.96
+[INFO ] 2025-03-27 15:37:34,311 CheckOutStepTwo.checkSumOfItemsIsEqualAsSubtotalPrice() - Getting the SUBTOTAL price from the web  97.96
+[INFO ] 2025-03-27 15:37:34,345 CheckOutStepTwo.checkTotalPriceIsSubtotalPlusTax() - Getting the TAX price from the web  7.84
+[INFO ] 2025-03-27 15:37:34,375 CheckOutStepTwo.checkTotalPriceIsSubtotalPlusTax() - Getting the TOTAL price from the web  105.8
+[INFO ] 2025-03-27 15:37:34,376 CheckOutStepTwo.checkTotalPriceIsSubtotalPlusTax() - Getting the TOTAL price from the Calculation  105.8
+[INFO ] 2025-03-27 15:37:34,834 SaurceDemoE2ESeleniumTestNG.afterMethod() - Screenshot Absoulte path => C:\Users\klajd\Documents\repositories\saucedemo\captura20250327153734.png

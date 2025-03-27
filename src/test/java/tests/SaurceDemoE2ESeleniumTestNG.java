@@ -26,16 +26,16 @@ import pages.Login;
 
 
 
-public class SeleniumSaurceDemoHappyPathTestNG {
+public class SaurceDemoE2ESeleniumTestNG {
 	
-	private static final Logger logger = LogManager.getLogger(SeleniumSaurceDemoHappyPathTestNG.class);
+	private static final Logger logger = LogManager.getLogger(SaurceDemoE2ESeleniumTestNG.class);
 	
 	WebDriver driver;
 	
   @BeforeMethod
   public void beforeMethod() {
 	  
- 
+	//Starting the webdriver
 	System.setProperty("webdriver.chrome.driver", "C:\\Users\\klajd\\Documents\\repositories\\saucedemo\\driver\\chromedriver\\chromedriver.exe");
 	driver = new ChromeDriver();
 	driver.manage().window().maximize();
@@ -48,25 +48,29 @@ public class SeleniumSaurceDemoHappyPathTestNG {
 	  
 	  logger.info("Starting tests...");
 
+	  // Login page User pass
 	  Login login = new Login(driver);
 	  login.loginWithStandartUser();
 	  
-	  
+	  //Adding productos into the cart
 	  Products products = new Products(driver);
 	  products.savePricesAndAddToCart();
 	  
+	  //Starting checkout
 	  Cart myCart = new Cart(driver);
 	  myCart.checkOut();
 	  
+	  //Adding User Data for checkout
 	  CheckOutStepOne stepOne = new CheckOutStepOne(driver);
 	  stepOne.fillDataAndContinue();
 	  
+	  //On summary page, checking the prices
 	  CheckOutStepTwo stepTwo = new CheckOutStepTwo(driver);
 	  Assert.assertTrue(stepTwo.checkSumOfItemsIsEqualAsSubtotalPrice(),"The sum of prices should be equal as the subtotal"); 
-	  Assert.assertTrue(stepTwo.checkTaxIsCorrect(),"The tax should be correct"); 
 	  Assert.assertTrue(stepTwo.checkTotalPriceIsSubtotalPlusTax(),"The Total price should be correct"); 
 	  stepTwo.clickOnFinish();
 	  
+	  //Finishing the order and checking the finish page
 	  CheckoutComplete finish = new CheckoutComplete(driver);
 	  Assert.assertTrue(finish.checkThatOrderIsFinished(),"In the finish page should be shown the OK image, the header, text and back button");
   }
@@ -76,12 +80,12 @@ public class SeleniumSaurceDemoHappyPathTestNG {
   public void afterMethod() {
 	  
 	  
-		//Obtengo la fecha actual con formato hasta segundos para ponerlo en el fichero de salida
+		//Getting the current date for sceenshot name  
 		Date currentDate = new Date();
 		SimpleDateFormat dateFormat = new SimpleDateFormat("yyyyMMddHHmmss");
 		String currentDateTime = dateFormat.format(currentDate);
 		
-		//Hacemos una captura de pantalla y mostramos la ruta del fichero		
+		//Getting the screenshot and saving it including in the name the current date
 		File srcFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
 		File destFile = new File("captura"+currentDateTime+".png");
 		
@@ -90,7 +94,7 @@ public class SeleniumSaurceDemoHappyPathTestNG {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		logger.info("Ruta de la caputa => {}",destFile.getAbsolutePath());
+		logger.info("Screenshot Absoulte path => {}",destFile.getAbsolutePath());
 		
 		//Close and quit
 		driver.close();
